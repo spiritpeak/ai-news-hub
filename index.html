@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI News Hub - 人工智能资讯中心</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    
+    <header class="cyber-header">
+        <div class="container">
+            <h1 class="glitch" data-text="AI NEWS HUB">AI NEWS HUB</h1>
+            <p class="subtitle">人工智能前沿资讯 · 实时更新</p>
+            <div class="status-bar">
+                <span class="status-indicator"></span>
+                <span id="last-update">最后更新：--</span>
+                <span class="next-update">下次更新：<span id="countdown">00:00</span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="news-categories">
+            <button class="category-btn active" data-category="all">全部</button>
+            <button class="category-btn" data-category="AI">AI 技术</button>
+            <button class="category-btn" data-category="技术">科技动态</button>
+        </div>
+
+        <div class="news-grid" id="news-container">
+            <!-- 新闻卡片将通过 JS 动态生成 -->
+            <div class="loading">
+                <div class="cyber-loader"></div>
+                <p>正在连接新闻源...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="cyber-footer">
+        <p>🤖 AI News Hub · 每 5 分钟自动更新 · 展示最近 3 天资讯</p>
+        <p class="source-list">新闻源：TechCrunch AI, The Verge, MIT Tech Review, 机器之心，量子位</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
