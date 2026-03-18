@@ -2,10 +2,13 @@
 """
 WSGI 入口文件
 Render 默认会导入 your_application.wsgi 并查找 application 对象
-代码文件在主目录下，直接导入 main 即可
 """
 
-from main import app as application
+# 延迟导入，避免类型推断问题
+def get_app():
+    import main
+    return main.app
 
-# 同时导出 app 以便兼容
+# 直接赋值
+application = get_app()
 app = application
